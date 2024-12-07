@@ -8,7 +8,7 @@ Keys Methods
    -executes a task after a specified delay
    command: the task to execute(must implement Runnable or Callable)
    delay: delay before the task starts
-   unit: time unit for the delas(TimeUnit.SECONDS)
+   unit: time unit for the delay(TimeUnit.SECONDS)
    -Returns :A ScheduledFuture<?> object representing the pending result of the task.
 
 Sample;

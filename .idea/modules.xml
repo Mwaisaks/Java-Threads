@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaThreads.iml" filepath="$PROJECT_DIR$/.idea/JavaThreads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThreadScheduling/ThreadScheduling.iml" filepath="$PROJECT_DIR$/ThreadScheduling/ThreadScheduling.iml" />
     </modules>
   </component>
 </project>
