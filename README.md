@@ -8,6 +8,36 @@ sleep()
 join()
 interrupt()
 
+Thread Priority
+- helps the Operating system to determine the order in which threads are scheduled
+- Thread class provides methods and constants for working with the priorities of a Thread.
+- Thread priorities do no guarantee the order in which threads execute and are very much platform-dependent.
+
+Built-in Property Constants of Thread Class
+MIN_PRIORITY - constant of 1
+NORM_PRIORITY - constant of 5
+MAX_PRIORITY - constant of 10
+
+Thread.getPriority()
+Thread.setPriority()
+
+Daemon Threads
+- a low-priority thread that runs in the background to perform tasks like garbage collection or monitoring. 
+- These threads exist to support user threads (non-daemon threads) and are automatically terminated by the JVM once all user threads have finished execution.
+
+Key Methods
+setDaemon(boolean isDaemon) 
+- Marks the thread as a daemon.
+Must be called before the thread starts; otherwise, it throws IllegalThreadStateException.
+isDaemon() 
+- Checks if a thread is a daemon thread.
+
+Characteristics of a Daemon Thread in Java
+- A Daemon thread is a low priority thread.
+- A Daemon thread is a service provider thread and should not be used as user thread.
+- JVM automatically closes the daemon thread(s) if no active thread is present and revives it if user threads are active again.
+- A daemon thread cannot prevent JVM to exit if all user threads are done.
+
 Thread Scheduling
 SchedulerExecutorService - a sub-interface of ExecutorServoce in the java.util.concurrent package provides methods which allow scheduling of tasks to run after a delay or periodically.
 
