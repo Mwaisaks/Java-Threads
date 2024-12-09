@@ -13,7 +13,7 @@ public class FixedRateExample {
         //Schedule a task torun at a fixed rate
         scheduler.scheduleAtFixedRate(() -> {
             System.out.println("Task running at fixed rate: " + //System.currentTimeMillis());
-                    + new SimpleDateFormat("HH:mm:ss".format(new Date()));
+                    new SimpleDateFormat("HH:mm:ss").format(new Date()));
         }, 2, 3, TimeUnit.SECONDS);
 
         //Stop the scheduler after 10 seconds

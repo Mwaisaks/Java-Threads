@@ -12,11 +12,12 @@ public class FixedDelayExample {
 
         //Schedule a task to run with a fixed delay
         scheduler.scheduleWithFixedDelay(() -> {
-            System.out.println("Task running with fixed delay: " + //System.currentTimeMillis());
-                    new SimpleDateFormat(("HH:mm:ss").format(String.valueOf(new Date())));
+            System.out.println("Task running with fixed delay: " +
+                    new SimpleDateFormat("HH:mm:ss").format(new Date()));
         }, 2, 3, TimeUnit.SECONDS);
 
-        //Stop the scheduler after 15 seconds
+
+        //Stop the sch eduler after 15 seconds
         scheduler.schedule(() -> {
             System.out.println("Scheduler shutting down...");
             scheduler.shutdown();
