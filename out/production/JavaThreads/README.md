@@ -75,6 +75,36 @@ Why Use Thread Pools?
 ~saves time; no need to create new thread.
 It is utilised in Servlet and JSP wherever instrunmentality creates a thread pool to method the request.
 
-To create Thread Pools in Java use methods from the java.util.concurrent.Executors class
+Thread Creation
+-use methods from the java.util.concurrent.Executors class
+
+1. NewFixedThreadPool(int nThreads)
+- Creates a thread pool with a fixed number of threads.
+- Threads remain alive even if idle.
+- Suitable for applications with a steady number of threads.
+
+2. newCachedThreadPool()
+- Creates a thread pool with a variable number of threads.
+- Threads are created a s needed.
+- idle threads are terminated after 60 seconds.
+
+3. newSingleThreadExecutor()
+- Creates a thread pool with only one thread
+- Executes tasks sequentially in a single thread
+- Useful for tasks that need to be processed in order
+
+4. newScheduledThreadPool(int corePoolSize)
+- Creates a thread pool that can schedule tasks to run after a delay or periodically
+
+Commonly Used Methods in Thread Pools
+Thread pools implement the ExecutorService interface, which provides various methods:
+
+Method	Description
+submit(Callable)	Submits a task that returns a result. Returns a Future.
+submit(Runnable)	Submits a task that doesn’t return a result.
+execute(Runnable)	Executes a task immediately (doesn't return a result).
+shutdown()	Gracefully shuts down the pool. Completes tasks in progress but doesn't accept new ones.
+shutdownNow()	Attempts to stop all actively executing tasks and halts the pool immediately.
+awaitTermination(long, TimeUnit)	Blocks until the pool shuts down or the timeout expires.
 
 this repository was created to review Threads in Java in preparation of our Saturday Session at Kenya JUG

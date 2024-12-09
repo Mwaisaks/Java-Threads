@@ -1,5 +1,13 @@
 Java Threads
 
+Main Thread in Java
+Whenever we run a java program, Java runtime searches for the main method and creates a main thread based on it
+If we're creating a multiple threads then all the child threads will be spawned from it
+To control the main Thread use:
+sleep()
+join()
+interrupt()
+
 Thread Scheduling
 SchedulerExecutorService - a sub-interface of ExecutorServoce in the java.util.concurrent package provides methods which allow scheduling of tasks to run after a delay or periodically.
 
@@ -106,4 +114,5 @@ execute(Runnable)	Executes a task immediately (doesn't return a result).
 shutdown()	Gracefully shuts down the pool. Completes tasks in progress but doesn't accept new ones.
 shutdownNow()	Attempts to stop all actively executing tasks and halts the pool immediately.
 awaitTermination(long, TimeUnit)	Blocks until the pool shuts down or the timeout expires.
+
 this repository was created to review Threads in Java in preparation of our Saturday Session at Kenya JUG
